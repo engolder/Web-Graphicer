@@ -70,4 +70,10 @@
     - set
 
 ## Animation
-     - default animation
+    - default animation
+     
+## Code view
+    - html
+        - copy
+    - css
+        - copy
