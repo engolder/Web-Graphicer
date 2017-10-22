@@ -63,16 +63,11 @@
         - delay
         - easy in-out
 
-## hover
-    - set
-
-## Click
-    - set
-
 ## Animation
     - default animation
      
 ## Code view
+    - Views
     - html
         - copy
     - css
