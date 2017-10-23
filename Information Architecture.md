@@ -1,29 +1,34 @@
 # index page
+======================
 
 ## Status
-    - tag name
-    - name(class or id)
     - opacity
 
-## Shape
+## Length
     - width length
     - height length
-    - radius
-    - background
-        - color
-        - gradient
-        - transparency
+
+## Color
+    - background-color
+    - transparency
+    - gradient
 
 ## Border
-    - direction
-        - style
-        - color
-        - width
+    - radius
+    - style
+    - color
+    - width
 
 ## Outline
     - style
     - color
     - width
+    
+## Transform
+    - translate
+    - scale
+    - rotate
+    - skew
 
 ## Shadow
     - box or text
@@ -32,7 +37,18 @@
         - blur Radius
         - spread
         - color
+        - outline or Inset
+        
+## Effect
+    - default effect
+    - create
+        - property
+        - duration
+        - delay
+        - easy in-out
 
+## Animation
+    - default animation
 
 ## Text
     - direction padding
@@ -49,26 +65,9 @@
     - overflow
     - transform
     
-## Transform
-    - translate
-    - scale
-    - rotate
-    - skew
-
-## Effect
-    - default effect
-    - create
-        - property
-        - duration
-        - delay
-        - easy in-out
-
-## Animation
-    - default animation
-     
 ## Code view
     - Views
-    - html
-        - copy
     - css
         - copy
+
+## Input Text

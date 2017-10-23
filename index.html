@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web-Graphicer</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <main>
+        <div class="leftSidebar sidebar">
+           <menu>
+               <form>
+                    <ul>
+                        <li id="menu-opacity">
+                            <div>opacity<input type="number"></div>
+                            <div><input type="range"></div>
+                        </li>
+                    </ul>
+               </form>
+           </menu>
+            <menu>
+                <div class="accordion ptr">Length</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-width">
+                                <div>width<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-height">
+                                <div>height<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Color</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-background-color">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Border</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-radius">
+                                <div>radius<input type="number" id="menu-radius-every"></div>
+                                <div>left-top<input type="number" id="menu-radius-lt"></div>
+                                <div>right-top<input type="number" id="menu-radius-rt"></div>
+                                <div>left-bottom<input type="number" id="menu-radius-lb"></div>
+                                <div>right-bottom<input type="number" id="menu-radius-rb"></div>
+                            </li>
+                            <li id="menu-border">
+                                <div>border</div>
+                                <div>width<input type="number" id="menu-border-every-width"></div>
+                                <div><input type="number" id="menu-border-every-style"></div>
+                                <div><input type="number" id="menu-border-every-color"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+        </div>
+        <div class="preview">
+            
+        </div>
+        <div class="rightSidebar sidebar">
+            <menu>
+                <div class="accordion ptr">Shape</div>
+                <div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo eligendi dolorum voluptas omnis sed enim, quo voluptatibus, veritatis dignissimos nulla odit a dicta iste saepe porro tempore delectus, mollitia vero.</div>
+            </menu>
+        </div>
+    </main>
+</body>
+</html>
