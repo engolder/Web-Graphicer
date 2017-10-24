@@ -51,7 +51,6 @@
     - supply animation
 
 ## Text
-    - style
     - align
     - overflow
     - decoration
@@ -63,11 +62,10 @@
 ## Font
     - color
     - size
-    - family
     - weight
     - variant
-    - kerning
     - transform
+    - letter-spacing
     
 ## Code view
     - Views
