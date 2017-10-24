@@ -54,16 +54,68 @@
                         <ul>
                             <li id="menu-radius">
                                 <div>radius<input type="number" id="menu-radius-every"></div>
-                                <div>left-top<input type="number" id="menu-radius-lt"></div>
-                                <div>right-top<input type="number" id="menu-radius-rt"></div>
-                                <div>left-bottom<input type="number" id="menu-radius-lb"></div>
-                                <div>right-bottom<input type="number" id="menu-radius-rb"></div>
+                                <div><input type="range"></div>
                             </li>
                             <li id="menu-border">
                                 <div>border</div>
                                 <div>width<input type="number" id="menu-border-every-width"></div>
-                                <div><input type="number" id="menu-border-every-style"></div>
+                                <div><input type="range"></div>
                                 <div><input type="number" id="menu-border-every-color"></div>
+                                <div><input type="number" id="menu-border-every-style"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Outline</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-outline-width">
+                                <div>width<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-outline-color">
+                                <div>color<input type="number"></div>
+                            </li>
+                            <li id="menu-outline-style">
+                                <div>style<input type="number"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Transform</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-transform-translate">
+                                <div>x<input type="number" id="menu-transform-translate-x"></div>
+                                <div><input type="range"></div>
+                                <div>y<input type="number" id="menu-transform-translate-y"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-transform-scale">
+                                <div>x<input type="number" id="menu-transform-scale-x"></div>
+                                <div><input type="range"></div>
+                                <div>y<input type="number" id="menu-transform-scale-y"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-transform-rotate">
+                                <div>x<input type="number" id="menu-transform-rotate-x"></div>
+                                <div><input type="range"></div>
+                                <div>y<input type="number" id="menu-transform-rotate-y"></div>
+                                <div><input type="range"></div>
+                                <div>z<input type="number" id="menu-transform-rotate-z"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-transform-skew">
+                                <div>x<input type="number" id="menu-transform-skew-x"></div>
+                                <div><input type="range"></div>
+                                <div>y<input type="number" id="menu-transform-skew-y"></div>
+                                <div><input type="range"></div>
                             </li>
                         </ul>
                     </form>
@@ -75,8 +127,55 @@
         </div>
         <div class="rightSidebar sidebar">
             <menu>
-                <div class="accordion ptr">Shape</div>
-                <div class="panel">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo eligendi dolorum voluptas omnis sed enim, quo voluptatibus, veritatis dignissimos nulla odit a dicta iste saepe porro tempore delectus, mollitia vero.</div>
+                <div class="accordion ptr">Shadow</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Effect</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-supplyEffect">
+                                <div>supply effect<input type="number"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Animation</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-supplyAnimation">
+                                <div>supply animation<input type="number"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Text</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                            <li id="menu-text-style">
+                                <div>style<input type="number"></div>
+                            </li>
+                            <li id="menu-text-align">
+                                <div>align</div>
+                                <div>left<input type="radio" name="align">center<input type="radio" name="align">right<input type="radio" name="align"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
             </menu>
         </div>
     </main>

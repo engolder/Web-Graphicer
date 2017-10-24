@@ -15,9 +15,9 @@
 
 ## Border
     - radius
-    - style
-    - color
     - width
+    - color
+    - style
 
 ## Outline
     - style
@@ -40,7 +40,7 @@
         - outline or Inset
         
 ## Effect
-    - default effect
+    - supply effect
     - create
         - property
         - duration
@@ -48,21 +48,25 @@
         - easy in-out
 
 ## Animation
-    - default animation
+    - supply animation
 
 ## Text
-    - direction padding
-    - text size
-    - text style
-    - family
-    - color
+    - style
     - align
-    - variant
-    - weight
-    - line position
-    - line style
-    - indent
     - overflow
+    - decoration
+        - line
+        - skip
+        - style
+    - indent    
+    
+## Font
+    - color
+    - size
+    - family
+    - weight
+    - variant
+    - kerning
     - transform
     
 ## Code view
