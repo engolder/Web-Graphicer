@@ -12,6 +12,8 @@ ul {
     cursor: pointer;
 }
 
+/*    main     */
+
 main {
     display: flex;
     width: 100%;
@@ -19,10 +21,7 @@ main {
     padding: 20px;
 }
 
-.preview {
-    flex: 1;
-    border: 10px solid red;
-}
+/*    sidebar     */
 
 .sidebar {
     width: 200px;
@@ -49,6 +48,35 @@ div.panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
 }
+
+/*    preview     */
+
+.canvas {
+    flex: 1;
+    border: 10px solid red;
+    font-size: 0;
+}
+
+.tabLink {
+    width: 50%;
+    border: 1px solid black;
+    color: black;
+    font-size: 16px;
+}
+
+.preview {
+    font-size: 16px;
+}
+
+#view, #cssCode {
+    display: none;
+}
+
+/*
+.tabContent {
+    display: none;
+}
+*/
 
 /* text box */
 
