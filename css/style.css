@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 ul {
@@ -47,4 +48,44 @@ div.panel {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+/* text box */
+
+#opacityBg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+}
+
+.opcOn {
+    animation: opcFade .5s forwards;
+}
+
+@keyframes opcFade {
+    from {
+        background-color: black;
+        opacity: 0;
+    }
+    to {
+        background-color: black;
+        opacity: 0.3;
+    }
+}
+
+#textBox {
+    position: fixed;
+    height: 60vh;
+    width: 50vw;
+    left: calc(50% - 25vw);
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid orange;
+    transition: all ease-in-out .5s;
+    top: 90vh;
+    z-index: 20;
 }
