@@ -4,21 +4,12 @@
     <meta charset="UTF-8">
     <title>Web-Graphicer</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="jscolor/jscolor.min.js"></script>
     <script src="script/script.js"></script>
 </head>
 <body>
     <main>
         <div class="leftSidebar sidebar">
-           <menu>
-               <form>
-                    <ul>
-                        <li id="menu-opacity">
-                            <div>opacity<input type="number"></div>
-                            <div><input type="range"></div>
-                        </li>
-                    </ul>
-               </form>
-           </menu>
             <menu>
                 <div class="accordion ptr">Length</div>
                 <div class="panel">
@@ -42,6 +33,25 @@
                     <form>
                         <ul>
                             <li id="menu-background-color">
+                                <div>background-color<input class="jscolor" value="000000"></div>
+                            </li>
+                            <li id="menu-gradient">
+                                <div>gradient</div>
+                                <div class="place">
+                                    <div>color 1<input class="jscolor" value="000000" id="menu-gradient-color1"></div>
+                                    <div>color 2<input class="jscolor" value="000000" id="menu-gradient-color2"></div>
+                                    <div>direction<select id="menu-gradient-direction">
+                                        <option value="toLeftTop">to left top</option>
+                                        <option value="toTop">to top</option>
+                                        <option value="toRightTop">to right top</option>
+                                        <option value="toRight">to right</option>
+                                        <option value="toRightBottom">to right bottom</option>
+                                        <option value="toBottom">to bottom</option>
+                                        <option value="toLeftBottom">to left bottom</option>
+                                        <option value="toLeft">to left</option>
+                                        <option value="radial">radial</option>
+                                    </select></div>
+                                </div>
                             </li>
                         </ul>
                     </form>
@@ -58,12 +68,23 @@
                             </li>
                             <li id="menu-border">
                                 <div>border</div>
-                                <div>width<input type="number" id="menu-border-every-width"></div>
-                                <div><input type="range"></div>
-                                <div>color<input type="number" id="menu-border-every-color"></div>
-                                <div>style<select id="menu-border-every-style">
-                                    <option value=""></option>
-                                </select></div>
+                                <div class="place">
+                                    <div>width<input type="number" id="menu-border-every-width"></div>
+                                    <div><input type="range"></div>
+                                    <div>color<input class="jscolor" value="000000"></div>
+                                    <div>style<select id="menu-border-every-style">
+                                        <option value="solid">solid</option>
+                                        <option value="dashed">dashed</option>
+                                        <option value="dotted">dotted</option>
+                                        <option value="double">double</option>
+                                        <option value="groove">groove</option>
+                                        <option value="inset">inset</option>
+                                        <option value="outset">outset</option>
+                                        <option value="ridge">ridge</option>
+                                        <option value="hidden">hidden</option>
+                                        <option value="inherit">inherit</option>
+                                    </select></div>
+                                </div>
                             </li>
                         </ul>
                     </form>
@@ -79,11 +100,20 @@
                                 <div><input type="range"></div>
                             </li>
                             <li id="menu-outline-color">
-                                <div>color<input type="number"></div>
+                                <div>color<input class="jscolor" value="000000"></div>
                             </li>
                             <li id="menu-outline-style">
                                 <div>style<select>
-                                    <option value=""></option>
+                                    <option value="solid">solid</option>
+                                    <option value="dashed">dashed</option>
+                                    <option value="dotted">dotted</option>
+                                    <option value="double">double</option>
+                                    <option value="groove">groove</option>
+                                    <option value="inset">inset</option>
+                                    <option value="outset">outset</option>
+                                    <option value="ridge">ridge</option>
+                                    <option value="hidden">hidden</option>
+                                    <option value="inherit">inherit</option>
                                 </select></div>
                             </li>
                         </ul>
@@ -96,30 +126,42 @@
                     <form>
                         <ul>
                             <li id="menu-transform-translate">
-                                <div>x<input type="number" id="menu-transform-translate-x"></div>
-                                <div><input type="range"></div>
-                                <div>y<input type="number" id="menu-transform-translate-y"></div>
-                                <div><input type="range"></div>
+                               <div>translate</div>
+                               <div class="place">
+                                    <div>x<input type="number" id="menu-transform-translate-x"></div>
+                                    <div><input type="range"></div>
+                                    <div>y<input type="number" id="menu-transform-translate-y"></div>
+                                    <div><input type="range"></div>
+                                </div>
                             </li>
                             <li id="menu-transform-scale">
-                                <div>x<input type="number" id="menu-transform-scale-x"></div>
-                                <div><input type="range"></div>
-                                <div>y<input type="number" id="menu-transform-scale-y"></div>
-                                <div><input type="range"></div>
+                               <div>scale</div>
+                               <div class="place">
+                                    <div>x<input type="number" id="menu-transform-scale-x"></div>
+                                    <div><input type="range"></div>
+                                    <div>y<input type="number" id="menu-transform-scale-y"></div>
+                                    <div><input type="range"></div>
+                                </div>
                             </li>
                             <li id="menu-transform-rotate">
-                                <div>x<input type="number" id="menu-transform-rotate-x"></div>
-                                <div><input type="range"></div>
-                                <div>y<input type="number" id="menu-transform-rotate-y"></div>
-                                <div><input type="range"></div>
-                                <div>z<input type="number" id="menu-transform-rotate-z"></div>
-                                <div><input type="range"></div>
+                               <div>rotate</div>
+                               <div class="place">
+                                    <div>x<input type="number" id="menu-transform-rotate-x"></div>
+                                    <div><input type="range"></div>
+                                    <div>y<input type="number" id="menu-transform-rotate-y"></div>
+                                    <div><input type="range"></div>
+                                    <div>z<input type="number" id="menu-transform-rotate-z"></div>
+                                    <div><input type="range"></div>
+                                </div>
                             </li>
                             <li id="menu-transform-skew">
-                                <div>x<input type="number" id="menu-transform-skew-x"></div>
-                                <div><input type="range"></div>
-                                <div>y<input type="number" id="menu-transform-skew-y"></div>
-                                <div><input type="range"></div>
+                               <div>skew</div>
+                               <div class="place">
+                                    <div>x<input type="number" id="menu-transform-skew-x"></div>
+                                    <div><input type="range"></div>
+                                    <div>y<input type="number" id="menu-transform-skew-y"></div>
+                                    <div><input type="range"></div>
+                                </div>
                             </li>
                         </ul>
                     </form>
@@ -127,7 +169,6 @@
             </menu>
         </div>
         <div class="canvas">
-          
            <div class="tab">
                <button class="tabLink ptr" value="view">view</button>
                <button class="tabLink ptr" value="cssCode">css</button>
@@ -147,12 +188,77 @@
             </div>
         </div>
         <div class="rightSidebar sidebar">
+           <menu>
+               <form>
+                    <ul>
+                        <li id="menu-opacity">
+                            <div>opacity<input type="number"></div>
+                            <div><input type="range"></div>
+                        </li>
+                    </ul>
+               </form>
+           </menu>
             <menu>
-                <div class="accordion ptr">Shadow</div>
+                <div class="accordion ptr">Box shadow</div>
                 <div class="panel">
                     <form>
                         <ul>
-                            <li id="">
+                           <style>
+                            </style>
+                            <li id="menu-box-shadow-x">
+                                <div>x<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-box-shadow-y">
+                                <div>y<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-box-shadow-blur">
+                                <div>blur<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-box-shadow-spread">
+                                <div>spread<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-box-shadow-color">
+                                <div>color<input class="jscolor" value="000000"></div>
+                            </li>
+                            <li id="menu-box-shadow-inset">
+                                <div>inset<input type="checkbox"></div>
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </menu>
+            <menu>
+                <div class="accordion ptr">Box shadow</div>
+                <div class="panel">
+                    <form>
+                        <ul>
+                           <style>
+                            </style>
+                            <li id="menu-text-shadow-x">
+                                <div>x<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-text-shadow-y">
+                                <div>y<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-text-shadow-blur">
+                                <div>blur<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-text-shadow-spread">
+                                <div>spread<input type="number"></div>
+                                <div><input type="range"></div>
+                            </li>
+                            <li id="menu-text-shadow-color">
+                                <div>color<input class="jscolor" value="000000"></div>
+                            </li>
+                            <li id="menu-text-shadow-inset">
+                                <div>inset<input type="checkbox"></div>
                             </li>
                         </ul>
                     </form>
@@ -254,7 +360,7 @@
                     <form>
                         <ul>
                             <li id="menu-font-color">
-                                <div>color</div>
+                                <div>color<input class="jscolor" value="000000"></div>
                             </li>
                             <li id="menu-font-size">
                                 <div>size<input type="number"></div>

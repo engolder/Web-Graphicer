@@ -68,7 +68,7 @@ div.panel {
     font-size: 16px;
 }
 
-#view, #cssCode {
+#cssCode {
     display: none;
 }
 
@@ -116,4 +116,5 @@ div.panel {
     transition: all ease-in-out .5s;
     top: 90vh;
     z-index: 20;
+    font-size: 16px;
 }

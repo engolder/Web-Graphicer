@@ -30,14 +30,21 @@
     - rotate
     - skew
 
-## Shadow
-    - box or text
-        - horizontal
-        - vertical
-        - blur Radius
-        - spread
-        - color
-        - outline or Inset
+## Box shadow
+    - horizontal
+    - vertical
+    - blur Radius
+    - spread
+    - color
+    - Inset
+        
+## Text shadow
+    - horizontal
+    - vertical
+    - blur Radius
+    - spread
+    - color
+    - Inset
         
 ## Effect
     - supply effect
