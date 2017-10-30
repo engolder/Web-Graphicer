@@ -19,7 +19,7 @@ ul {
 main {
     display: flex;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 20px;
 }
 
@@ -46,18 +46,20 @@ menu {
     position: relative;
 }
 
-div.accordion:hover {
+div.accordion.active, div.accordion:hover {
     background-color: #cccccc;
-}
-
-div.accordion.active {
-    background-color: #e6e6e6;
 }
 
 div.panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: all 0.4s ease-in-out;
+    padding: 0 20px;
+}
+
+div.accordion.active+.panel {
+    padding: 20px;
+    max-height: 400px;
 }
 
 /*    input style     */
@@ -67,12 +69,19 @@ input[type="number"] {
     float: right;
 }
 
-/*    preview     */
+/*    canvas     */
 
 .canvas {
     flex: 1;
     font-size: 0;
     margin: 0 20px;
+    transition: height 0.2s;
+}
+
+.canvas-container {
+    width: calc(100% - 480px);
+    height: calc(100vh - 40px);
+    position: fixed;
     border: 1px solid black;
 }
 
@@ -85,6 +94,15 @@ input[type="number"] {
 
 .preview {
     font-size: 16px;
+    text-align: center;
+}
+
+#view {
+    width: 100px;
+    height: 200px;
+    background: linear-gradient(to top left, #ff994f, #888888);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
+    display: inline-block;
 }
 
 #cssCode {

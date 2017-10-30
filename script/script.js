@@ -7,15 +7,9 @@ window.onload = function() {
     for (i = 0; i < acc.length; i++) {
       acc[i].onclick = function() {
         var panel = this.nextElementSibling;
-        if (panel.style.maxHeight){
-            panel.style.maxHeight = null;
+        if (this.classList.contains("active")){
             this.classList.remove("active");
         } else {
-            for(j = 0; j < acc.length; j++) {
-                acc[j].nextElementSibling.style.maxHeight = null;
-                acc[j].classList.remove("active");  
-            }
-            panel.style.maxHeight = panel.scrollHeight + "px";
             this.classList.add("active");
         } 
       }
@@ -23,7 +17,7 @@ window.onload = function() {
     
     // tabs
     
-    var tabLink = document.getElementsByClassName("tabLink");
+    var tabLink = documentd.getElementsByClassName("tabLink");
     tabLink[0].onclick = function() {
         document.getElementById("view").style.display = "block";
         document.getElementById("cssCode").style.display = "none";
