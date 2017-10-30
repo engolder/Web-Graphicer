@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -28,33 +30,50 @@ main {
 }
 
 menu {
-    border: 2px solid black;
+    margin: 5px 0;
+    -webkit-box-shadow:0px 2px 6px rgba(0, 0, 0, 0.36) ;
+    box-shadow:0px 2px 6px rgba(0, 0, 0, 0.36) ;
 }
 
 .accordion {
     border: none;
     text-align: left;
     outline: none;
-    transition: 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    padding: 8px 20px;
+    position: relative;
 }
 
-div.accordion.active, div.accordion:hover {
-    background-color: #ccc;
+div.accordion:hover {
+    background-color: #cccccc;
+}
+
+div.accordion.active {
+    background-color: #e6e6e6;
 }
 
 div.panel {
-    background-color: blue;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+/*    input style     */
+
+input[type="number"] {
+    width: 50%;
+    float: right;
 }
 
 /*    preview     */
 
 .canvas {
     flex: 1;
-    border: 10px solid red;
     font-size: 0;
+    margin: 0 20px;
+    border: 1px solid black;
 }
 
 .tabLink {
@@ -72,13 +91,7 @@ div.panel {
     display: none;
 }
 
-/*
-.tabContent {
-    display: none;
-}
-*/
-
-/* text box */
+/*    text box     */
 
 #opacityBg {
     width: 100vw;
@@ -113,8 +126,14 @@ div.panel {
     background-color: white;
     border-radius: 10px;
     border: 1px solid orange;
-    transition: all ease-in-out .5s;
+    transition: top ease-in-out .5s;
     top: 90vh;
     z-index: 20;
     font-size: 16px;
+}
+
+/*    opacity-tool     */
+
+#opacity-tool {
+    padding : 
 }
