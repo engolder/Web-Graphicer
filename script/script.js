@@ -17,7 +17,7 @@ window.onload = function() {
     
     // tabs
     
-    var tabLink = documentd.getElementsByClassName("tabLink");
+    var tabLink = document.getElementsByClassName("tabLink");
     tabLink[0].onclick = function() {
         document.getElementById("view").style.display = "block";
         document.getElementById("cssCode").style.display = "none";
