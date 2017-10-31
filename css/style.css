@@ -61,15 +61,11 @@ div.panel {
 }
 
 div.accordion.active+.panel {
-    padding: 20px;
-    max-height: 400px;
+    max-height: none;
 }
 
-/*    input style     */
-
-input[type="number"] {
-    width: 50%;
-    float: right;
+.panel li {
+    margin: 30px 0;
 }
 
 /*    canvas     */
