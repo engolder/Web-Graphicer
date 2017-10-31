@@ -85,11 +85,29 @@ input[type=range]:focus::-ms-fill-upper {
   background: #8aadff;
 }
 
-/*    text     */
+/*    number     */
 
 input[type=number] {
     width: 50%;
     float: right;
     border: none;
-    border: 1px solid #8aadff;
+    border: 1px solid #bababa;
+    padding: 2px 7px;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/*    select     */
+
+/*    jscolor     */
+
+input.jscolor {
+    width: 70px;
+    padding: 2px 0;
+    border: 1px solid #bababa;
+    float: right;
+    text-align: center;
 }

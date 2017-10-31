@@ -3,15 +3,10 @@ window.onload = function() {
     // accordion
     
     var acc = document.getElementsByClassName("accordion");
-    var i,j
+    var i;
     for (i = 0; i < acc.length; i++) {
       acc[i].onclick = function() {
-        var panel = this.nextElementSibling;
-        if (this.classList.contains("active")){
-            this.classList.remove("active");
-        } else {
-            this.classList.add("active");
-        } 
+        this.classList.toggle("active");
       }
     }
     

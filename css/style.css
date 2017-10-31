@@ -29,7 +29,7 @@ main {
 /*    sidebar     */
 
 .sidebar {
-    width: 200px;
+    width: 250px;
 }
 
 menu {
@@ -56,16 +56,28 @@ div.accordion.active, div.accordion:hover {
 div.panel {
     max-height: 0;
     overflow: hidden;
-    transition: all 0.4s ease-in-out;
+    -webkit-transition: max-height 0.4s ease-out;
+    -o-transition: max-height 0.4s ease-out;
+    transition: max-height 0.4s ease-out; 
     padding: 0 20px;
+    color: #6d6d6d;
 }
 
 div.accordion.active+.panel {
-    max-height: none;
+    max-height: 600px;
 }
 
 .panel li {
     margin: 30px 0;
+}
+
+.panel li div {
+    margin: 5px 0;
+}
+
+.panel .place {
+    background-color: #d8d8d8;
+    padding: 10px;
 }
 
 /*    canvas     */
@@ -74,17 +86,20 @@ div.accordion.active+.panel {
     flex: 1;
     font-size: 0;
     margin: 0 20px;
-    transition: height 0.2s;
+    -webkit-transition: height 0.2s;
+    -o-transition: height 0.2s;
+    transition: height 0.2s; 
 }
 
 .canvas-container {
-    width: calc(100% - 480px);
+    width: calc(100% - 580px);
     height: calc(100vh - 40px);
     position: fixed;
 }
 
 .tab {
-    box-shadow:0px 2px 6px rgba(0, 0, 0, 0.36);
+    -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.36);
 }
 
 .tabLink {
@@ -101,6 +116,7 @@ div.accordion.active+.panel {
     width: 100%;
     height: calc(100% - 36px);
     display: flex;
+    -ms-align-items: center;
     align-items: center;
     justify-content: center;
     border: 1px solid #b4b4b4;
@@ -110,7 +126,10 @@ div.accordion.active+.panel {
 #view {
     width: 100px;
     height: 200px;
+    background: -webkit-linear-gradient(bottom right, #ff994f, #888888);
+    background: -o-linear-gradient(bottom right, #ff994f, #888888);
     background: linear-gradient(to top left, #ff994f, #888888);
+    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
 }
 
@@ -131,6 +150,8 @@ div.accordion.active+.panel {
 }
 
 .opcOn {
+    -webkit-animation: opcFade .5s forwards;
+    -o-animation: opcFade .5s forwards;
     animation: opcFade .5s forwards;
 }
 
@@ -152,16 +173,20 @@ div.accordion.active+.panel {
     left: calc(50% - 25vw);
     background-color: white;
     border-radius: 10px;
-    transition: all ease-in-out .3s;
+    -webkit-transition: all ease-in-out .3s;;
+    -o-transition: all ease-in-out .3s;;
+    transition: all ease-in-out .3s;;
     top: 90vh;
     z-index: 20;
     font-size: 16px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);;
     padding: 20px;
 }
 
 #textBox.ptr:hover {
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.83);
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.83);;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.83);;
 }
 
 #textBox-title {
