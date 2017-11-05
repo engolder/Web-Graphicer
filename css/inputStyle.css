@@ -90,10 +90,9 @@ input[type=range]:focus::-ms-fill-upper {
 input[type=number] {
     width: 50%;
     float: right;
-    border: none;
     border: 1px solid #bababa;
     padding: 2px 7px;
-    text-align: right;
+    text-align: left;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -104,18 +103,19 @@ input[type=number]::-webkit-outer-spin-button {
 /*    select     */
 
 select {
-    float: right;
-    padding: 2px 7px;
     width: 50%;
+    float: right;
     border: 1px solid #bababa;
+    padding: 2px 7px;
+    text-align: left;
 }
 
 /*    jscolor     */
 
 input.jscolor {
     width: 50%;
-    padding: 2px 0;
-    border: 1px solid #bababa;
     float: right;
-    text-align: center;
+    border: 1px solid #bababa;
+    padding: 2px 7px;
+    text-align: left;
 }
