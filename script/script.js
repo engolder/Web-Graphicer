@@ -48,5 +48,10 @@ window.onload = function() {
         this.classList.remove("opcOn");
     }
     
-    // menu
+    // inputContents
+    var contents = document.getElementById("inputContents");
+    contents.onkeydown = function() {
+        document.getElementById("view").innerHTML = contents.value;
+    }
+    
 }
