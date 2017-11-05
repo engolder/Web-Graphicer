@@ -109,6 +109,24 @@ div.accordion.active+.panel {
     border: none;
     padding: 8px;
     background-color: white;
+    transition: background-color .5s;
+}
+
+.tabLink:hover {
+    background-color: #d8d8d8;
+}
+
+.tabLink.active {
+    background-color: #d8d8d8;
+}
+
+#currentbar {
+    width: 50%;
+    background: #8aadff;
+    height: 5px;
+    position: relative;
+    left: 0;
+    transition: left .5s;
 }
 
 .preview {

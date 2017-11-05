@@ -13,20 +13,26 @@ window.onload = function() {
     // tabs
     
     var tabLink = document.getElementsByClassName("tabLink");
+    var crtbar = document.getElementById("currentbar");
     tabLink[0].onclick = function() {
         document.getElementById("view").style.display = "block";
         document.getElementById("cssCode").style.display = "none";
+        this.classList.add("active");
+        tabLink[1].classList.remove("active");
+        crtbar.style.left = "0";
     }
     tabLink[1].onclick = function() {
         document.getElementById("cssCode").style.display = "block";
         document.getElementById("view").style.display = "none";
+        this.classList.add("active");
+        tabLink[0].classList.remove("active");
+        crtbar.style.left = "50%";
     }
     
     // text box
     
     var textBox = document.getElementById("textBox");
     var opcBg = document.getElementById("opacityBg");
-    
     textBox.onclick = function() {
         if ( this.classList.contains("ptr") ) {
             this.classList.remove("ptr");
@@ -35,11 +41,12 @@ window.onload = function() {
             opcBg.classList.add("opcOn");
         }
     }
-    
     opcBg.onclick = function() {
         textBox.classList.add("ptr");
         textBox.style.top = "90vh";
         this.style.display = "none";
         this.classList.remove("opcOn");
     }
+    
+    // menu
 }
