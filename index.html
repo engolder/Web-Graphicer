@@ -232,7 +232,8 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                                 <div>color<input class="jscolor" value="FFFFFF"></div>
                             </li>
                             <li id="menu-box-shadow-inset">
-                                <div>inset<input type="checkbox"></div>
+                                <input type="checkbox" id="box-inset"/>
+                                <label for="box-inset"><span></span>Inset</label>
                             </li>
                         </ul>
                     </form>
@@ -265,7 +266,8 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                                 <div>color<input class="jscolor" value="FFFFFF"></div>
                             </li>
                             <li id="menu-text-shadow-inset">
-                                <div>inset<input type="checkbox"></div>
+                                <input type="checkbox" id="text-inset"/>
+                                <label for="box-inset"><span></span>Inset</label>
                             </li>
                         </ul>
                     </form>
@@ -277,7 +279,7 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                     <form>
                         <ul>
                             <li id="menu-supplyEffect">
-                                <div>supply effect<select>
+                                <div>supply<select>
                                     <option value=""></option>
                                 </select></div>
                             </li>
@@ -291,7 +293,7 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                     <form>
                         <ul>
                             <li id="menu-supplyAnimation">
-                                <div>supply animation<select>
+                                <div>supply<select>
                                     <option value=""></option>
                                 </select></div>
                             </li>
@@ -306,7 +308,12 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                         <ul>
                             <li id="menu-text-align">
                                 <div>align</div>
-                                <div>left<input type="radio" name="align">center<input type="radio" name="align">right<input type="radio" name="align"></div>
+                                <input type="radio" id="align-left" name="align">
+                                <label for="align-left"><span></span>left</label>
+                                <input type="radio" id="align-center" name="align">
+                                <label for="align-center"><span></span>center</label>
+                                <input type="radio" id="align-right" name="align">
+                                <label for="align-right"><span></span>right</label>
                             </li>
                             <li id="menu-text-overflow">
                                 <div>overflow<select>
@@ -316,7 +323,7 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                                 </select></div>
                             </li>
                             <li id="menu-text-decoration-line">
-                                <div>decoration-line<select>
+                                <div>line<select>
                                     <option value="none">none</option>
                                     <option value="line-through">line-through</option>
                                     <option value="overline">overline</option>
@@ -335,7 +342,7 @@ box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
                             </li>
 -->
                             <li id="menu-text-decoration-style">
-                                <div>decoration-style<select>
+                                <div>line-style<select>
                                     <option value="solid">solid</option>
                                     <option value="dashed">dashed</option>
                                     <option value="dotted">dotted</option>
