@@ -154,8 +154,15 @@ input[type="radio"]:checked + label span {
 
 /*    jscolor     */
 
+.color {
+    background-image: url(../img/color.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+}
+
 input.jscolor {
-    width: 50%;
+    width: calc(50% + 10px);
     float: right;
     border: 1px solid #bababa;
     padding: 2px 7px;
