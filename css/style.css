@@ -204,4 +204,6 @@ div.accordion.active+.panel {
 /*    opacity-tool     */
 
 #opacity-tool {
+    padding: 40px 20px;
+    margin-bottom: 40px;
 }
