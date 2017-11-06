@@ -49,9 +49,9 @@ window.onload = function() {
     }
     
     // inputContents
+    
     var contents = document.getElementById("inputContents");
-    contents.onkeydown = function() {
+    contents.onkeyup = function() {
         document.getElementById("view").innerHTML = contents.value;
     }
-    
 }
