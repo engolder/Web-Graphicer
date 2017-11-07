@@ -48,17 +48,27 @@ window.onload = function() {
         this.classList.remove("opcOn");
     }
     
-    // inputContents
+    // input text contents fuction
     
     var contents = document.getElementById("inputContents");
-    contents.onkeyup = function() {
+    contents.oninput = function() {
         document.getElementById("view").innerHTML = contents.value;
     }
+    
+    // checking value fuction
     
     var inputRange = document.querySelectorAll("input[type='range']");
     for(i=0; i<inputRange.length; i++) {
         inputRange[i].oninput = function() {
-            this.parentNode.previousElementSibling.querySelector("input[type='number']").value = this.value;
+            var valueTarget = this.parentNode.previousElementSibling.querySelector("input[type='number']");
+            valueTarget.value = this.value;
+        }
+    }
+    var inputNumber = document.querySelectorAll("input[type='number']");
+    for(i=0; i<inputNumber.length; i++) {
+        inputNumber[i].oninput = function() {
+            var valueTarget = this.parentNode.nextElementSibling.querySelector("input[type='range']");
+            valueTarget.value = this.value;
         }
     }
 }
