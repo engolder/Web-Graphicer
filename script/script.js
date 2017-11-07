@@ -54,4 +54,11 @@ window.onload = function() {
     contents.onkeyup = function() {
         document.getElementById("view").innerHTML = contents.value;
     }
+    
+    var inputRange = document.querySelectorAll("input[type='range']");
+    for(i=0; i<inputRange.length; i++) {
+        inputRange[i].oninput = function() {
+            this.parentNode.previousElementSibling.querySelector("input[type='number']").value = this.value;
+        }
+    }
 }

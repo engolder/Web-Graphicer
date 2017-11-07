@@ -116,6 +116,8 @@ div.accordion.active+.panel {
     border: none;
     padding: 8px;
     background-color: white;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
     transition: background-color .5s;
 }
 
@@ -133,6 +135,8 @@ div.accordion.active+.panel {
     height: 5px;
     position: relative;
     left: 0;
+    -webkit-transition: left .5s;
+    -o-transition: left .5s;
     transition: left .5s;
 }
 
@@ -214,18 +218,6 @@ div.accordion.active+.panel {
     width: 100%;
     height: 35vh;
     resize: none;
-}
-
-/*    view     */
-
-#view {
-    width: 100px;
-    height: 200px;
-    background: -webkit-linear-gradient(bottom right, #ff994f, #888888);
-    background: -o-linear-gradient(bottom right, #ff994f, #888888);
-    background: linear-gradient(to top left, #ff994f, #888888);
-    -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
 }
 
 /*    input style     */
