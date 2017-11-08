@@ -1,19 +1,17 @@
 window.onload = function() {
     
-    // accordion
-    
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    // accordion menu
+    let acc = document.getElementsByClassName("accordion");
+    let i;
     for (i = 0; i < acc.length; i++) {
       acc[i].onclick = function() {
         this.classList.toggle("active");
       }
     }
     
-    // tabs
-    
-    var tabLink = document.getElementsByClassName("tabLink");
-    var crtbar = document.getElementById("currentbar");
+    // tabs menu
+    let tabLink = document.getElementsByClassName("tabLink");
+    let crtbar = document.getElementById("currentbar");
     tabLink[0].onclick = function() {
         document.getElementById("view").style.display = "block";
         document.getElementById("cssCode").style.display = "none";
@@ -29,10 +27,9 @@ window.onload = function() {
         crtbar.style.left = "50%";
     }
     
-    // text box
-    
-    var textBox = document.getElementById("textBox");
-    var opcBg = document.getElementById("opacityBg");
+    // open text box event
+    let textBox = document.getElementById("textBox");
+    let opcBg = document.getElementById("opacityBg");
     textBox.onclick = function() {
         if ( this.classList.contains("ptr") ) {
             this.classList.remove("ptr");
@@ -41,6 +38,7 @@ window.onload = function() {
             opcBg.classList.add("opcOn");
         }
     }
+        // exit text box
     opcBg.onclick = function() {
         textBox.classList.add("ptr");
         textBox.style.top = "90vh";
@@ -48,43 +46,46 @@ window.onload = function() {
         this.classList.remove("opcOn");
     }
     
-    // input text contents fuction
+    // linking inputText value to view 
     
-    var contents = document.getElementById("inputContents");
+    let contents = document.getElementById("inputContents");
     contents.oninput = function() {
         document.getElementById("view").innerHTML = contents.value;
     }
     
     // checking value fuction
     
-    var inputRange = document.querySelectorAll("input[type='range']");
-    var inputNumber = document.querySelectorAll("input[type='number']");
+    // input range, input number
+    let inputRange = document.querySelectorAll("input[type='range']");
+    let inputNumber = document.querySelectorAll("input[type='number']");
     for(i=0; i<inputRange.length; i++) {
         // from range value to number value
         inputRange[i].oninput = function() {
-            var valueTarget = this.parentNode.previousElementSibling.querySelector("input[type='number']");
+            let valueTarget = this.parentNode.previousElementSibling.querySelector("input[type='number']");
             valueTarget.value = this.value;
-            setPreview();
+            setPreviewWithTool();
         }
         // from number value to range value
         inputNumber[i].oninput = function() {
-            var valueTarget = this.parentNode.nextElementSibling.querySelector("input[type='range']");
+            let valueTarget = this.parentNode.nextElementSibling.querySelector("input[type='range']");
             valueTarget.value = this.value;
-            setPreview();
+            setPreviewWithTool();
         }
     }
     
-    var inputColor = document.querySelectorAll(".jscolor");
+    // input color
+    let inputColor = document.querySelectorAll(".jscolor");
     for(i=0; i<inputColor.length; i++) {
         inputColor[i].onchange = function() {
-            setPreview();
+            setPreviewWithTool();
         }
     }
     
-    var view = document.getElementById("view");
-    var cssCode = document.querySelector("#cssCode textarea");
-    function setPreview() {
-        var viewCsstext = "";
+    function setPreviewWithTool() {
+        let view = document.getElementById("view");
+        let cssCode = document.querySelector("#cssCode textarea");
+        let tabAct = document.querySelector(".tabLink[value='view']");
+        let viewCsstext = "";
         cssCode.value = "";
         
         viewCsstext = 
@@ -95,11 +96,12 @@ window.onload = function() {
             "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";";
         
         view.style.cssText = viewCsstext;
-        if(view.style.display == "none") {
-            view.style.cssText += "display : none";    
+        
+        if( !tabAct.classList.contains("active") ) {
+            view.style.cssText += "display : none;";
         }
         
-        var lineAlign = viewCsstext.split(";");
+        let lineAlign = viewCsstext.split(";");
         
         for(i=0; i<lineAlign.length; i++) {
             cssCode.value += lineAlign[i] + "\n";
