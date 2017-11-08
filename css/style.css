@@ -152,6 +152,15 @@ div.accordion.active+.panel {
     border-top: none;
 }
 
+/*    view     */
+
+#view {
+    width: 100px;
+    height: 200px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.45);
+    display: block;
+}
+
 #cssCode {
     display: none;
 }

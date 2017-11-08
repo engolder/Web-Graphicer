@@ -58,17 +58,51 @@ window.onload = function() {
     // checking value fuction
     
     var inputRange = document.querySelectorAll("input[type='range']");
+    var inputNumber = document.querySelectorAll("input[type='number']");
     for(i=0; i<inputRange.length; i++) {
+        // from range value to number value
         inputRange[i].oninput = function() {
             var valueTarget = this.parentNode.previousElementSibling.querySelector("input[type='number']");
             valueTarget.value = this.value;
+            setPreview();
         }
-    }
-    var inputNumber = document.querySelectorAll("input[type='number']");
-    for(i=0; i<inputNumber.length; i++) {
+        // from number value to range value
         inputNumber[i].oninput = function() {
             var valueTarget = this.parentNode.nextElementSibling.querySelector("input[type='range']");
             valueTarget.value = this.value;
+            setPreview();
+        }
+    }
+    
+    var inputColor = document.querySelectorAll(".jscolor");
+    for(i=0; i<inputColor.length; i++) {
+        inputColor[i].onchange = function() {
+            setPreview();
+        }
+    }
+    
+    var view = document.getElementById("view");
+    var cssCode = document.querySelector("#cssCode textarea");
+    function setPreview() {
+        var viewCsstext = "";
+        cssCode.value = "";
+        
+        viewCsstext = 
+            //length
+            "width:"+document.querySelector("#menu-width input[type='number']").value+"px;"+
+            "height:"+document.querySelector("#menu-height input[type='number']").value+"px;"+
+            //color
+            "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";";
+        
+        view.style.cssText = viewCsstext;
+        if(view.style.display == "none") {
+            view.style.cssText += "display : none";    
+        }
+        
+        var lineAlign = viewCsstext.split(";");
+        
+        for(i=0; i<lineAlign.length; i++) {
+            cssCode.value += lineAlign[i] + "\n";
         }
     }
 }
