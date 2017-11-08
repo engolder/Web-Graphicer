@@ -152,7 +152,7 @@ div.accordion.active+.panel {
     border-top: none;
 }
 
-/*    view     */
+/*    preview *     */
 
 #view {
     width: 100px;
@@ -163,6 +163,16 @@ div.accordion.active+.panel {
 
 #cssCode {
     display: none;
+    width: 50%;
+    height: 50%;
+}
+
+#cssCode textarea {
+    overflow: auto;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #b4b4b4;
 }
 
 /*    text box     */
