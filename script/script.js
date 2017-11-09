@@ -81,6 +81,14 @@ window.onload = function() {
         }
     }
     
+    // input checkbox
+    let inputCheckbox = document.querySelectorAll("input[type='checkbox']");
+    for(i=0; i<inputCheckbox.length; i++) {
+        inputCheckbox[i].onchange = function() {
+            setPreviewWithTool();
+        }
+    }
+    
     // select
     let inputSelect = document.getElementsByTagName("select");
     for(i=0; i<inputSelect.length; i++) {
@@ -102,7 +110,8 @@ window.onload = function() {
             "width:"+document.querySelector("#menu-width input[type='number']").value+"px;"+
             "height:"+document.querySelector("#menu-height input[type='number']").value+"px;"+
             //color
-            "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";";
+            "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";"+
+            "";
         
         
         //gradient
