@@ -111,24 +111,32 @@ window.onload = function() {
             "height:"+document.querySelector("#menu-height input[type='number']").value+"px;"+
             //color
             "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";"+
-            "";
+            //border
+            "border-radius:"+document.querySelector("#menu-radius input[type='number']").value+"px;"+
+            "border:"+document.querySelector("#menu-border-every-width").value+"px "+
+            document.querySelector("#menu-border-every-style").value+" #"+
+            document.querySelector("#menu-border .jscolor").value+";";
         
         
         //gradient
         if( document.getElementById("gradient-use").checked ) {
+            let gradDirectionValue = document.getElementById("menu-gradient-direction").value;
+            let color1Value = document.getElementById("menu-gradient-color1").value;
+            let color2Value = document.getElementById("menu-gradient-color2").value;
+            let browserSupport = ["-webkit-","-o-","-moz-",""];
             //radial
-            if( document.getElementById("menu-gradient-direction").value == "radial") {
-                viewCsstext +=
-                    "background : radial-gradient( circle, #"+
-                    document.getElementById("menu-gradient-color1").value +", #"+
-                    document.getElementById("menu-gradient-color2").value +");";
+            if( gradDirectionValue == "radial") {
+                let gradientText = "radial-gradient( circle, #"+ color1Value +", #"+ color2Value +");";
+                for(i=0; i<browserSupport.length; i++) {
+                    viewCsstext += "background : "+ browserSupport[i] + gradientText;
+                }
             }
             //linear
             else {
-                viewCsstext +=
-                    "background : linear-gradient( " + document.getElementById("menu-gradient-direction").value + ", #"+
-                    document.getElementById("menu-gradient-color1").value +", #"+
-                    document.getElementById("menu-gradient-color2").value +");";
+                let gradientText = "linear-gradient( " + gradDirectionValue + ", #"+ color1Value +", #"+ color2Value +");";
+                for(i=0; i<browserSupport.length; i++) {
+                    viewCsstext += "background : "+ browserSupport[i] + gradientText;
+                }
             }
         }
         
