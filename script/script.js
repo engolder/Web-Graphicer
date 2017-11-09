@@ -81,6 +81,15 @@ window.onload = function() {
         }
     }
     
+    // select
+    let inputSelect = document.getElementsByTagName("select");
+    for(i=0; i<inputSelect.length; i++) {
+        inputSelect[i].onchange = function() {
+            setPreviewWithTool();
+        }
+    }
+    
+    //translating
     function setPreviewWithTool() {
         let view = document.getElementById("view");
         let cssCode = document.querySelector("#cssCode textarea");
