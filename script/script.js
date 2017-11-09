@@ -95,6 +95,25 @@ window.onload = function() {
             //color
             "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";";
         
+        
+        //gradient
+        if( document.getElementById("gradient-use").checked ) {
+            //radial
+            if( document.getElementById("menu-gradient-direction").value == "radial") {
+                viewCsstext +=
+                    "background : radial-gradient( circle, #"+
+                    document.getElementById("menu-gradient-color1").value +", #"+
+                    document.getElementById("menu-gradient-color2").value +");";
+            }
+            //linear
+            else {
+                viewCsstext +=
+                    "background : linear-gradient( " + document.getElementById("menu-gradient-direction").value + ", #"+
+                    document.getElementById("menu-gradient-color1").value +", #"+
+                    document.getElementById("menu-gradient-color2").value +");";
+            }
+        }
+        
         view.style.cssText = viewCsstext;
         
         if( !tabAct.classList.contains("active") ) {
@@ -103,8 +122,8 @@ window.onload = function() {
         
         let lineAlign = viewCsstext.split(";");
         
-        for(i=0; i<lineAlign.length; i++) {
-            cssCode.value += lineAlign[i] + "\n";
+        for(i=0; i<lineAlign.length-1; i++) {
+            cssCode.value += lineAlign[i] + ";\n";
         }
     }
 }

@@ -36,19 +36,20 @@
                                 <div class="color">background<input class="jscolor" value="FFFFFF"></div>
                             </li>
                             <li id="menu-gradient">
-                                <div>gradient</div>
+                                <div><input type="checkbox" id="gradient-use">
+                                <label for="gradient-use"><span></span>gradient</label></div>
                                 <div class="place">
                                     <div class="color">color 1<input class="jscolor" value="FFFFFF" id="menu-gradient-color1"></div>
                                     <div class="color">color 2<input class="jscolor" value="FFFFFF" id="menu-gradient-color2"></div>
                                     <div>direction<select id="menu-gradient-direction">
-                                        <option value="toLeftTop">to left top</option>
-                                        <option value="toTop">to top</option>
-                                        <option value="toRightTop">to right top</option>
-                                        <option value="toRight">to right</option>
-                                        <option value="toRightBottom">to right bottom</option>
-                                        <option value="toBottom">to bottom</option>
-                                        <option value="toLeftBottom">to left bottom</option>
-                                        <option value="toLeft">to left</option>
+                                        <option value="to left top">to left top</option>
+                                        <option value="to top">to top</option>
+                                        <option value="to right top">to right top</option>
+                                        <option value="to right">to right</option>
+                                        <option value="to right bottom">to right bottom</option>
+                                        <option value="to bottom">to bottom</option>
+                                        <option value="to left bottom">to left bottom</option>
+                                        <option value="to left">to left</option>
                                         <option value="radial">radial</option>
                                     </select></div>
                                 </div>
@@ -178,7 +179,7 @@
                 <div class="preview">
                     <div class="tabContent" id="view"></div>
                     <div class="tabContent" id="cssCode">
-                        <textarea name=""></textarea>
+                        <textarea name="" readonly="readonly"></textarea>
                     </div>
                 </div>
                 <div id="opacityBg">
@@ -207,8 +208,6 @@
                 <div class="panel">
                     <form>
                         <ul>
-                           <style>
-                            </style>
                             <li id="menu-box-shadow-x">
                                 <div>x(px)<input type="number"></div>
                                 <div><input type="range"></div>
@@ -241,8 +240,6 @@
                 <div class="panel">
                     <form>
                         <ul>
-                           <style>
-                            </style>
                             <li id="menu-text-shadow-x">
                                 <div>x(px)<input type="number"></div>
                                 <div><input type="range"></div>
@@ -264,7 +261,7 @@
                             </li>
                             <li id="menu-text-shadow-inset">
                                 <input type="checkbox" id="text-inset"/>
-                                <label for="box-inset"><span></span>Inset</label>
+                                <label for="text-inset"><span></span>Inset</label>
                             </li>
                         </ul>
                     </form>
