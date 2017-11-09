@@ -17,11 +17,11 @@
                         <ul>
                             <li id="menu-width">
                                 <div>width(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div><input type="range" value="200" min="0" max="500"></div>
                             </li>
                             <li id="menu-height">
                                 <div>height(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div><input type="range" value="200" min="0" max="500"></div>
                             </li>
                         </ul>
                     </form>
@@ -65,18 +65,13 @@
                         <ul>
                             <li id="menu-radius">
                                 <div>radius(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div><input type="range" value="0" min="0" max="250"></div>
                             </li>
-                            <style>
-                                d {
-                                    border: 1px solid black;
-                                }
-                            </style>
                             <li id="menu-border">
                                 <div>border</div>
                                 <div class="place">
                                     <div>width(px)<input type="number" id="menu-border-every-width"></div>
-                                    <div><input type="range"></div>
+                                    <div><input type="range" value="1" min="0" max="50"></div>
                                     <div class="color">color<input class="jscolor" value="FFFFFF"></div>
                                     <div>style<select id="menu-border-every-style">
                                         <option value="solid">solid</option>
@@ -100,14 +95,10 @@
                 <div class="accordion ptr">Outline</div>
                 <div class="panel">
                     <form>
-                       <style>
-                           d {
-                           }
-                        </style>
                         <ul>
                             <li id="menu-outline-width">
                                 <div>width(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div><input type="range" value="0" min="0" max="250"></div>
                             </li>
                             <li id="menu-outline-color">
                                 <div class="color">color<input class="jscolor" value="FFFFFF"></div>
@@ -135,7 +126,10 @@
                 <div class="panel">
                     <form>
                         <ul>
+<!--
                             <li id="menu-transform-translate">
+                              <style>
+                                </style>
                                <div>translate</div>
                                <div class="place">
                                     <div>x(px)<input type="number" id="menu-transform-translate-x"></div>
@@ -144,33 +138,34 @@
                                     <div><input type="range"></div>
                                 </div>
                             </li>
+                            <li id="menu-transform-skew">
+                               <div>skew</div>
+                               <div class="place">
+                                    <div>x(deg)<input type="number" id="menu-transform-skew-x"></div>
+                                    <div><input type="range" value="0" min="0" max="180"></div>
+                                    <div>y(deg)<input type="number" id="menu-transform-skew-y"></div>
+                                    <div><input type="range" value="0" min="0" max="180"></div>
+                                </div>
+                            </li>
+-->
                             <li id="menu-transform-scale">
                                <div>scale</div>
                                <div class="place">
                                     <div>x(px)<input type="number" id="menu-transform-scale-x"></div>
-                                    <div><input type="range"></div>
+                                    <div><input type="range" value="1" min="0" max="2" step="0.1"></div>
                                     <div>y(px)<input type="number" id="menu-transform-scale-y"></div>
-                                    <div><input type="range"></div>
+                                    <div><input type="range" value="1" min="0" max="2" step="0.1"></div>
                                 </div>
                             </li>
                             <li id="menu-transform-rotate">
                                <div>rotate</div>
                                <div class="place">
                                     <div>x(deg)<input type="number" id="menu-transform-rotate-x"></div>
-                                    <div><input type="range"></div>
+                                    <div><input type="range" value="0" min="0" max="360"></div>
                                     <div>y(deg)<input type="number" id="menu-transform-rotate-y"></div>
-                                    <div><input type="range"></div>
+                                    <div><input type="range" value="0" min="0" max="360"></div>
                                     <div>z(deg)<input type="number" id="menu-transform-rotate-z"></div>
-                                    <div><input type="range"></div>
-                                </div>
-                            </li>
-                            <li id="menu-transform-skew">
-                               <div>skew</div>
-                               <div class="place">
-                                    <div>x(px)<input type="number" id="menu-transform-skew-x"></div>
-                                    <div><input type="range"></div>
-                                    <div>y(px)<input type="number" id="menu-transform-skew-y"></div>
-                                    <div><input type="range"></div>
+                                    <div><input type="range" value="0" min="0" max="360"></div>
                                 </div>
                             </li>
                         </ul>

@@ -59,6 +59,8 @@ window.onload = function() {
     let inputRange = document.querySelectorAll("input[type='range']");
     let inputNumber = document.querySelectorAll("input[type='number']");
     for(i=0; i<inputRange.length; i++) {
+        // number value setting
+        inputNumber[i].value = inputRange[i].value;
         // from range value to number value
         inputRange[i].oninput = function() {
             let valueTarget = this.parentNode.previousElementSibling.querySelector("input[type='number']");
@@ -115,7 +117,25 @@ window.onload = function() {
             "border-radius:"+document.querySelector("#menu-radius input[type='number']").value+"px;"+
             "border:"+document.querySelector("#menu-border-every-width").value+"px "+
             document.querySelector("#menu-border-every-style").value+" #"+
-            document.querySelector("#menu-border .jscolor").value+";";
+            document.querySelector("#menu-border .jscolor").value+";"+
+            //outline
+            "outline:"+document.querySelector("#menu-outline-width input[type='number']").value+"px "+
+            document.querySelector("#menu-outline-style select").value+" #"+
+            document.querySelector("#menu-outline-color .jscolor").value+";"+
+            //Transform
+            "transform:"+
+//            "translate("+
+//            document.querySelector("#menu-transform-translate-x").value+"px,"+
+//            document.querySelector("#menu-transform-translate-y").value+"px) "+
+//            "skew("+
+//            document.querySelector("#menu-transform-skew-x").value+"deg,"+
+//            document.querySelector("#menu-transform-skew-y").value+"deg) "
+            "scale("+
+            document.querySelector("#menu-transform-scale-x").value+","+
+            document.querySelector("#menu-transform-scale-y").value+") "+
+            "rotateX("+document.querySelector("#menu-transform-rotate-x").value+"deg) "+
+            "rotateY("+document.querySelector("#menu-transform-rotate-y").value+"deg) "+
+            "rotateZ("+document.querySelector("#menu-transform-rotate-z").value+"deg);";
         
         
         //gradient
