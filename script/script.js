@@ -99,6 +99,8 @@ window.onload = function() {
         }
     }
     
+    setPreviewWithTool();
+    
     //translating
     function setPreviewWithTool() {
         let view = document.getElementById("view");

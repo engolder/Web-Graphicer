@@ -72,7 +72,7 @@
                                 <div class="place">
                                     <div>width(px)<input type="number" id="menu-border-every-width"></div>
                                     <div><input type="range" value="1" min="0" max="50"></div>
-                                    <div class="color">color<input class="jscolor" value="FFFFFF"></div>
+                                    <div class="color">color<input class="jscolor" value="000000"></div>
                                     <div>style<select id="menu-border-every-style">
                                         <option value="solid">solid</option>
                                         <option value="dashed">dashed</option>
@@ -197,9 +197,16 @@
             </div>
         </div>
         <div class="rightSidebar sidebar">
-           <menu id="opacity-tool">
+           <menu id="basic-tool">
                <form>
                     <ul>
+                        <li id="menu-box-sizing">
+                            <div>box-sizing</div>
+                            <input type="radio" id="border-box" name="box-sizing" checked="checked">
+                            <label for="box-sizing"><span></span>border-box</label><br>
+                            <input type="radio" id="content-box" name="box-sizing">
+                            <label for="content-box"><span></span>content-box</label>
+                        </li>
                         <li id="menu-opacity">
                             <div>opacity<input type="number"></div>
                             <div><input type="range"></div>
