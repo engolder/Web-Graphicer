@@ -163,6 +163,14 @@ window.onload = function() {
             document.querySelector("#menu-text-shadow-y input[type='number']").value+"px "+
             document.querySelector("#menu-text-shadow-blur input[type='number']").value+"px #"+
             document.querySelector("#menu-text-shadow-color .jscolor").value+";"+
+            //text
+            "text-align:"+document.querySelector("#menu-text-align input[type='radio']:checked").value+";"+
+            "text-overflow:"+document.querySelector("#menu-text-overflow select").value+";"+
+            "text-decoration-line:"+document.querySelector("#menu-text-decoration-line select").value+";"+
+            "text-decoration-style:"+document.querySelector("#menu-text-decoration-style select").value+";"+
+            "text-indent:"+document.querySelector("#menu-text-indent input[type='number']").value+"px;"+
+            "text-transform:"+document.querySelector("#menu-text-transform select").value+";"+
+            //font
             "";
         
         

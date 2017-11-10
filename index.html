@@ -305,11 +305,11 @@
                         <ul>
                             <li id="menu-text-align">
                                 <div>align</div>
-                                <input type="radio" id="align-left" name="align" checked="checked">
+                                <input type="radio" value="left" id="align-left" name="align" checked="checked">
                                 <label for="align-left"><span></span>left</label>
-                                <input type="radio" id="align-center" name="align">
+                                <input type="radio" value="center" id="align-center" name="align">
                                 <label for="align-center"><span></span>center</label>
-                                <input type="radio" id="align-right" name="align">
+                                <input type="radio" value="right" id="align-right" name="align">
                                 <label for="align-right"><span></span>right</label>
                             </li>
                             <li id="menu-text-overflow">
@@ -348,8 +348,8 @@
                                 </select></div>
                             </li>
                             <li id="menu-text-indent">
-                                <div>indent<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div>indent(px)<input type="number"></div>
+                                <div><input type="range" value="0" min="0" max="100"></div>
                             </li>
                             <li id="menu-text-transform">
                                 <div>transform<select>
