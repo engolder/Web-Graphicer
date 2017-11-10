@@ -155,6 +155,7 @@ menu label {
     justify-content: center;
     border: 1px solid #b4b4b4;
     border-top: none;
+    overflow: hidden;
 }
 
 /*    preview *     */

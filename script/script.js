@@ -149,11 +149,21 @@ window.onload = function() {
             //basic-tool
             "box-sizing:"+document.querySelector("#menu-box-sizing input[type='radio']:checked").value+";"+
             "opacity:"+document.querySelector("#menu-opacity input[type='number']").value+";"+
+            //box shadow
             "box-shadow:"+
+            ( ( document.querySelector("#box-inset").checked ) ? "inset " : "")+
             document.querySelector("#menu-box-shadow-x input[type='number']").value+"px "+
             document.querySelector("#menu-box-shadow-y input[type='number']").value+"px "+
             document.querySelector("#menu-box-shadow-blur input[type='number']").value+"px "+
-            document.querySelector("#menu-box-shadow-spread input[type='number']").value+"px "+;
+            document.querySelector("#menu-box-shadow-spread input[type='number']").value+"px #"+
+            document.querySelector("#menu-box-shadow-color .jscolor").value+";"+
+            //text shaodw
+            "text-shadow:"+
+            document.querySelector("#menu-text-shadow-x input[type='number']").value+"px "+
+            document.querySelector("#menu-text-shadow-y input[type='number']").value+"px "+
+            document.querySelector("#menu-text-shadow-blur input[type='number']").value+"px #"+
+            document.querySelector("#menu-text-shadow-color .jscolor").value+";"+
+            "";
         
         
         //gradient
