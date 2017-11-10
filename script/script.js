@@ -91,6 +91,14 @@ window.onload = function() {
         }
     }
     
+    // input radio
+    let inputRadio = document.querySelectorAll("input[type='radio']");
+    for(i=0; i<inputRadio.length; i++) {
+        inputRadio[i].onchange = function() {
+            setPreviewWithTool();
+        }
+    }
+    
     // select
     let inputSelect = document.getElementsByTagName("select");
     for(i=0; i<inputSelect.length; i++) {
@@ -137,7 +145,15 @@ window.onload = function() {
             document.querySelector("#menu-transform-scale-y").value+") "+
             "rotateX("+document.querySelector("#menu-transform-rotate-x").value+"deg) "+
             "rotateY("+document.querySelector("#menu-transform-rotate-y").value+"deg) "+
-            "rotateZ("+document.querySelector("#menu-transform-rotate-z").value+"deg);";
+            "rotateZ("+document.querySelector("#menu-transform-rotate-z").value+"deg);"+
+            //basic-tool
+            "box-sizing:"+document.querySelector("#menu-box-sizing input[type='radio']:checked").value+";"+
+            "opacity:"+document.querySelector("#menu-opacity input[type='number']").value+";"+
+            "box-shadow:"+
+            document.querySelector("#menu-box-shadow-x input[type='number']").value+"px "+
+            document.querySelector("#menu-box-shadow-y input[type='number']").value+"px "+
+            document.querySelector("#menu-box-shadow-blur input[type='number']").value+"px "+
+            document.querySelector("#menu-box-shadow-spread input[type='number']").value+"px "+;
         
         
         //gradient

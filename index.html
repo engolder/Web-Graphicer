@@ -152,9 +152,9 @@
                                <div>scale</div>
                                <div class="place">
                                     <div>x(px)<input type="number" id="menu-transform-scale-x"></div>
-                                    <div><input type="range" value="1" min="0" max="2" step="0.1"></div>
+                                    <div><input type="range" value="1" min="0" max="2" step="0.01"></div>
                                     <div>y(px)<input type="number" id="menu-transform-scale-y"></div>
-                                    <div><input type="range" value="1" min="0" max="2" step="0.1"></div>
+                                    <div><input type="range" value="1" min="0" max="2" step="0.01"></div>
                                 </div>
                             </li>
                             <li id="menu-transform-rotate">
@@ -202,14 +202,14 @@
                     <ul>
                         <li id="menu-box-sizing">
                             <div>box-sizing</div>
-                            <input type="radio" id="border-box" name="box-sizing" checked="checked">
-                            <label for="box-sizing"><span></span>border-box</label><br>
-                            <input type="radio" id="content-box" name="box-sizing">
-                            <label for="content-box"><span></span>content-box</label>
+                            <input type="radio" id="content-box" name="box-sizing" value="content-box" checked="checked">
+                            <label for="content-box"><span></span>content-box</label><br>
+                            <input type="radio" id="border-box" name="box-sizing" value="border-box">
+                            <label for="border-box"><span></span>border-box</label>
                         </li>
                         <li id="menu-opacity">
                             <div>opacity<input type="number"></div>
-                            <div><input type="range"></div>
+                            <div><input type="range" value="1" min="0" max="1" step="0.01"></div>
                         </li>
                     </ul>
                </form>
