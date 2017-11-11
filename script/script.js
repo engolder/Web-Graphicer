@@ -171,6 +171,11 @@ window.onload = function() {
             "text-indent:"+document.querySelector("#menu-text-indent input[type='number']").value+"px;"+
             "text-transform:"+document.querySelector("#menu-text-transform select").value+";"+
             //font
+            "color:#"+document.querySelector("#menu-font-color .jscolor").value+";"+
+            "font-size:"+document.querySelector("#menu-font-size input[type='number']").value+"px;"+
+            "font-weight:"+document.querySelector("#menu-font-weight input[type='number']").value+";"+
+            "font-variant:"+document.querySelector("#menu-font-variant select").value+";"+
+            "letter-spacing:"+document.querySelector("#menu-letter-spacing input[type='number']").value+"px;"+
             "";
         
         

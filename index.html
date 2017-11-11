@@ -371,15 +371,15 @@
                     <form>
                         <ul>
                             <li id="menu-font-color">
-                                <div class="color">color<input class="jscolor" value="FFFFFF"></div>
+                                <div class="color">color<input class="jscolor" value="000000"></div>
                             </li>
                             <li id="menu-font-size">
                                 <div>size(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div><input type="range" value="16" min="0" max="100"></div>
                             </li>
                             <li id="menu-font-weight">
-                                <div>weight(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div>weight<input type="number"></div>
+                                <div><input type="range" value="500" min="100" max="900" step="100"></div>
                             </li>
                             <li id="menu-font-variant">
                                 <div>variant<select>
@@ -390,7 +390,7 @@
                             </li>
                             <li id="menu-letter-spacing">
                                 <div>spacing(px)<input type="number"></div>
-                                <div><input type="range"></div>
+                                <div><input type="range" value="0" min="-100" max="100"></div>
                             </li>
                         </ul>
                     </form>
