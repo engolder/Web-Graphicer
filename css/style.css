@@ -364,6 +364,16 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
+/*     text     */
+
+input[type="text"] {
+    width: 50%;
+    float: right;
+    border: 1px solid #bababa;
+    padding: 2px 7px;
+    text-align: left;
+}
+
 /*    select     */
 
 select {
