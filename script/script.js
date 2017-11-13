@@ -125,9 +125,9 @@ function setPreviewWithTool() {
     let view = document.getElementById("view");
     let viewHover = document.querySelector("#view:hover");
     let cssCode = document.querySelector("#cssCode textarea");
-    let tabAct = document.querySelector(".tabLink[value='view']");
     let viewCsstext = "";
     let viewHoverCsstext = "";
+    let tabAct = document.querySelector(".tabLink[value='view']");
     cssCode.value = "";
 
     viewCsstext = 
@@ -214,7 +214,7 @@ function setPreviewWithTool() {
         }
     }
 
-//    viewHoverCsstext =;
+//    viewHoverCsstext = "animation:"+document.querySelector("");
 
     //view style
     view.style.cssText = viewCsstext;
@@ -225,9 +225,12 @@ function setPreviewWithTool() {
 
     //css text preview
     let lineAlign = viewCsstext.split(";");
-    cssCode.value += "."+document.querySelector("#menu-class-name input[type='text']").value+"{\n"
+    let className = document.querySelector("#menu-class-name input[type='text']");
+    cssCode.value += "."+className.value+"{\n"
     for(i=0; i<lineAlign.length-1; i++) {
         cssCode.value += "  " + lineAlign[i] + ";\n";
     }
     cssCode.value += "}";
+    //hover css text preview
+    cssCode.value += "."+className.value+":hover{\n"
 }
