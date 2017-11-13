@@ -24,36 +24,44 @@ main {
     min-height: 100vh;
     padding: 20px;
     font-family: 'Droid Sans', sans-serif;
+    background-color: #F2F2F2;
 }
 
 /*    sidebar     */
 
 .sidebar {
     width: 250px;
+    position: relative;
+    z-index: 0;
 }
 
 menu {
     margin: 5px 0;
-/*
     -webkit-box-shadow:0px 2px 6px rgba(0, 0, 0, 0.36) ;
     box-shadow:0px 2px 6px rgba(0, 0, 0, 0.36) ;
-*/
-    border: 1px solid #cccccc;
 }
 
 .accordion {
     border: none;
     text-align: left;
     outline: none;
-    -webkit-transition: all 0.4s;
-    -o-transition: all 0.4s;
-    transition: all 0.4s;
+    -webkit-transition: background-color,color 0.4s;
+    -o-transition: background-color,color 0.4s;
+    transition: background-color,color 0.4s;
     padding: 8px 20px;
     position: relative;
+    background-color: #363636;
+    color: white;
 }
 
-div.accordion.active, div.accordion:hover {
-    background-color: #cccccc;
+.accordion:hover, .accordion.active {
+    background-color: #505050;
+}
+
+.accordion.active {
+    -webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.47);
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.47);
+    color: #8aadff;
 }
 
 div.panel {
@@ -63,7 +71,8 @@ div.panel {
     -o-transition: max-height 0.4s ease-out;
     transition: max-height 0.4s ease-out; 
     padding: 0 20px;
-    color: #6d6d6d;
+    color: white;
+    background-color: #6a6a6a;
 }
 
 div.accordion.active+.panel {
@@ -79,7 +88,7 @@ menu li div {
 }
 
 menu .place {
-    background-color: #d8d8d8;
+    background-color: #7c7c7c;
     padding: 10px;
 }
 
@@ -92,7 +101,9 @@ menu label {
 #basic-tool {
     padding: 5px 20px;
     margin-bottom: 40px;
-    border: 5px solid #dbdbdb;
+    color: white;
+    background-color: #6a6a6a;
+    border-top: 10px solid #505050;
 }
 
 /*    canvas     */
@@ -104,6 +115,8 @@ menu label {
     -webkit-transition: height 0.2s;
     -o-transition: height 0.2s;
     transition: height 0.2s; 
+    position: relative;
+    z-index: 5;
 }
 
 .canvas-container {
@@ -119,23 +132,26 @@ menu label {
 
 .tabLink {
     width: 50%;
-    color: black;
     font-size: 18px;
     border: none;
     padding: 8px;
-    background-color: white;
-    -webkit-transition: background-color .5s;
-    -o-transition: background-color .5s;
-    transition: background-color .5s;
+    -webkit-transition: background-color,color 0.4s;
+    -o-transition: background-color,color 0.4s;
+    transition: background-color,color 0.4s;
+    color: white;
+    background-color: #363636;
 }
 
-.tabLink:hover {
-    background-color: #d8d8d8;
+.tabLink.active, .tabLink:hover {
+    background-color: #505050;
 }
 
 .tabLink.active {
-    background-color: #d8d8d8;
+    -webkit-box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.47);
+    box-shadow: inset 2px 2px 10px rgba(0, 0, 0, 0.47);
+    color: #8aadff;
 }
+
 
 #currentbar {
     width: 50%;
@@ -159,6 +175,7 @@ menu label {
     border: 1px solid #b4b4b4;
     border-top: none;
     overflow: hidden;
+    background-color: white;
 }
 
 /*    preview *     */
@@ -213,20 +230,22 @@ menu label {
     left: calc(50% - 25vw);
     background-color: white;
     border-radius: 10px;
-    -webkit-transition: all ease-in-out .3s;;
-    -o-transition: all ease-in-out .3s;;
-    transition: all ease-in-out .3s;;
+    -webkit-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
     top: 90vh;
     z-index: 20;
     font-size: 16px;
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);;
+    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.69);
     padding: 20px;
+    background-color: #363636;
+    color: white;
 }
 
 #textBox.ptr:hover {
-    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.83);;
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.83);;
+    background-color: #505050;
+    color: #8aadff;
 }
 
 #textBox-title {
@@ -368,10 +387,16 @@ input[type="checkbox"] + label span {
     vertical-align:middle;
     border: 1px solid #bababa;
     cursor:pointer;
+    background-image: url(../img/check.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0px;
+    -webkit-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
 }
 input[type="checkbox"]:checked + label span {
-    background-image: url(../img/check.png);
-    background-size: cover;
+    background-size: 19px;
 }
 
 /*    radio     */
@@ -391,10 +416,16 @@ input[type="radio"] + label span {
     vertical-align:middle;
     border: 1px solid #bababa;
     cursor:pointer;
+    background-image: url(../img/select.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 0px;
+    -webkit-transition: background 0.2s;
+    -o-transition: background 0.2s;
+    transition: background 0.2s;
 }
 input[type="radio"]:checked + label span {
-    background-image: url(../img/select.png);
-    background-size: cover;
+    background-size: 19px;
 }
 
 /*    jscolor     */
