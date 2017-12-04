@@ -120,6 +120,7 @@ window.onload = function() {
 
 //translating
 function setPreviewWithTool() {
+    let browserSupport = ["-webkit-","-moz-","-o-",""];
     let view = document.getElementById("view");
     let cssCode = document.querySelector("#cssCode textarea");
     let viewCsstext = "";
@@ -130,35 +131,35 @@ function setPreviewWithTool() {
         //length
         "width:"+document.querySelector("#menu-width input[type='number']").value+"px;"+
         "height:"+document.querySelector("#menu-height input[type='number']").value+"px;"+
+        
         //color
         "background-color:#"+document.querySelector("#menu-background-color .jscolor").value+";"+
+        
         //border
         "border-radius:"+document.querySelector("#menu-radius input[type='number']").value+"px;"+
         "border:"+document.querySelector("#menu-border-every-width").value+"px "+
         document.querySelector("#menu-border-every-style").value+" #"+
         document.querySelector("#menu-border .jscolor").value+";"+
+        
         //outline
         "outline:"+document.querySelector("#menu-outline-width input[type='number']").value+"px "+
         document.querySelector("#menu-outline-style select").value+" #"+
         document.querySelector("#menu-outline-color .jscolor").value+";"+
-        //Transform
-        "transform:"+
-//            "translate("+
-//            document.querySelector("#menu-transform-translate-x").value+"px,"+
-//            document.querySelector("#menu-transform-translate-y").value+"px) "+
-//            "skew("+
-//            document.querySelector("#menu-transform-skew-x").value+"deg,"+
-//            document.querySelector("#menu-transform-skew-y").value+"deg) "
-        "scale("+
-        document.querySelector("#menu-transform-scale-x").value+","+
-        document.querySelector("#menu-transform-scale-y").value+") "+
-        "rotateX("+document.querySelector("#menu-transform-rotate-x").value+"deg) "+
-        "rotateY("+document.querySelector("#menu-transform-rotate-y").value+"deg) "+
-        "rotateZ("+document.querySelector("#menu-transform-rotate-z").value+"deg);"+
+        
         //basic-tool
+        "-webkit-box-sizing:"+document.querySelector("#menu-box-sizing input[type='radio']:checked").value+";"+
+        "-moz-box-sizing:"+document.querySelector("#menu-box-sizing input[type='radio']:checked").value+";"+
         "box-sizing:"+document.querySelector("#menu-box-sizing input[type='radio']:checked").value+";"+
         "opacity:"+document.querySelector("#menu-opacity input[type='number']").value+";"+
+        
         //box shadow
+        "-webkit-box-shadow:"+
+        ( ( document.querySelector("#box-inset").checked ) ? "inset " : "")+
+        document.querySelector("#menu-box-shadow-x input[type='number']").value+"px "+
+        document.querySelector("#menu-box-shadow-y input[type='number']").value+"px "+
+        document.querySelector("#menu-box-shadow-blur input[type='number']").value+"px "+
+        document.querySelector("#menu-box-shadow-spread input[type='number']").value+"px #"+
+        document.querySelector("#menu-box-shadow-color .jscolor").value+";"+
         "box-shadow:"+
         ( ( document.querySelector("#box-inset").checked ) ? "inset " : "")+
         document.querySelector("#menu-box-shadow-x input[type='number']").value+"px "+
@@ -166,12 +167,14 @@ function setPreviewWithTool() {
         document.querySelector("#menu-box-shadow-blur input[type='number']").value+"px "+
         document.querySelector("#menu-box-shadow-spread input[type='number']").value+"px #"+
         document.querySelector("#menu-box-shadow-color .jscolor").value+";"+
+        
         //text shaodw
         "text-shadow:"+
         document.querySelector("#menu-text-shadow-x input[type='number']").value+"px "+
         document.querySelector("#menu-text-shadow-y input[type='number']").value+"px "+
         document.querySelector("#menu-text-shadow-blur input[type='number']").value+"px #"+
         document.querySelector("#menu-text-shadow-color .jscolor").value+";"+
+        
         //text
         "text-align:"+document.querySelector("#menu-text-align input[type='radio']:checked").value+";"+
         "text-overflow:"+document.querySelector("#menu-text-overflow select").value+";"+
@@ -179,6 +182,7 @@ function setPreviewWithTool() {
         "text-decoration-style:"+document.querySelector("#menu-text-decoration-style select").value+";"+
         "text-indent:"+document.querySelector("#menu-text-indent input[type='number']").value+"px;"+
         "text-transform:"+document.querySelector("#menu-text-transform select").value+";"+
+        
         //font
         "color:#"+document.querySelector("#menu-font-color .jscolor").value+";"+
         "font-size:"+document.querySelector("#menu-font-size input[type='number']").value+"px;"+
@@ -186,14 +190,26 @@ function setPreviewWithTool() {
         "font-variant:"+document.querySelector("#menu-font-variant select").value+";"+
         "letter-spacing:"+document.querySelector("#menu-letter-spacing input[type='number']").value+"px;"+
         "";
-
+    
+    //Transform
+    let transformText = 
+        "transform:"+
+        "scale("+
+        document.querySelector("#menu-transform-scale-x").value+","+
+        document.querySelector("#menu-transform-scale-y").value+") "+
+        "rotateX("+document.querySelector("#menu-transform-rotate-x").value+"deg) "+
+        "rotateY("+document.querySelector("#menu-transform-rotate-y").value+"deg) "+
+        "rotateZ("+document.querySelector("#menu-transform-rotate-z").value+"deg);";
+    
+    for(i=0; i<browserSupport.length; i++) {
+        viewCsstext += browserSupport[i] + transformText;
+    }
 
     //gradient
     if( document.getElementById("gradient-use").checked ) {
         let gradDirectionValue = document.getElementById("menu-gradient-direction").value;
         let color1Value = document.getElementById("menu-gradient-color1").value;
         let color2Value = document.getElementById("menu-gradient-color2").value;
-        let browserSupport = ["-webkit-","-o-","-moz-",""];
         //radial
         if( gradDirectionValue == "radial") {
             let gradientText = "radial-gradient( circle, #"+ color1Value +", #"+ color2Value +");";
